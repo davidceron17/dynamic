@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Climate Crisis', cursive;
+}
+
+body {
+    background-image: linear-gradient(to right, #1a5791, #0e508d, #053868);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.title h2 {
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+    font-size: 70px;
+}
+
+.navs {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+li {
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navs ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navs ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.navs ul li a:hover {
+    transform: translateY(-5px);
+}
+
+.navs ul li a:hover::before {
+    width: 100%;
+}
+
+@media (orientation: portrait) {
+    .title h1 {
+        font-size: 90px;
+    }
+}
+
+
+.container p {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: scaleIn 1s ease-in-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
